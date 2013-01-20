@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CpuWidget</class>
+ <widget class="QWidget" name="CpuWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>588</width>
+    <height>53</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="nameLabel">
+     <property name="text">
+      <string>CPU0:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="currentFreqLabel">
+     <property name="minimumSize">
+      <size>
+       <width>65</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>1600 MHz</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="governorComboBox">
+     <item>
+      <property name="text">
+       <string>conservative</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ondemand</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>powersave</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>performance</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>userspace</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSlider" name="freqSlider">
+     <property name="minimumSize">
+      <size>
+       <width>50</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximum">
+      <number>5</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBothSides</enum>
+     </property>
+     <property name="tickInterval">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="freqRangeLabel">
+     <property name="text">
+      <string>800 MHz - 2400 MHz</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

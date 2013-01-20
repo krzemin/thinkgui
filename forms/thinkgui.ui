@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ThinkGui</class>
+ <widget class="QDialog" name="ThinkGui">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>693</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Think GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/resources.qrc">
+    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="cpuGroupBox">
+     <property name="title">
+      <string>CPU</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>9</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="setAllLabel">
+           <property name="text">
+            <string>Set all to:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="conservativeButton">
+           <property name="text">
+            <string>conservative</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ondemandButton">
+           <property name="text">
+            <string>ondemand</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="performanceButton">
+           <property name="text">
+            <string>performance</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="powersaveButton">
+           <property name="text">
+            <string>powersave</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="userspaceButton">
+           <property name="text">
+            <string>userspace</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="sensorsGroupBox">
+     <property name="title">
+      <string>Sensors</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3"/>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="batteryGroupBox">
+     <property name="title">
+      <string>Battery</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../res/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

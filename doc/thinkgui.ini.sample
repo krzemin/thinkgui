@@ -1,0 +1,64 @@
+[general]
+refresh=1000
+cpus=4
+sensors=3
+batteries=1
+
+[governors]
+conservative_min=1200
+conservative_max=2000
+ondemand_min=min
+ondemand_max=max
+performance_min=1600
+performance_max=max
+powersave_min=min
+powersave_max=1600
+userspace_min=min
+userspace_max=max
+
+[cpu0]
+name=CPU0
+sysdir=/sys/devices/system/cpu/cpu0/cpufreq/
+
+[cpu1]
+name=CPU1
+sysdir=/sys/devices/system/cpu/cpu1/cpufreq/
+
+[cpu2]
+name=CPU2
+sysdir=/sys/devices/system/cpu/cpu2/cpufreq/
+
+[cpu3]
+name=CPU3
+sysdir=/sys/devices/system/cpu/cpu3/cpufreq/
+
+[sensor0]
+name="Core 0"
+format="%val%degC"
+value=/sys/devices/platform/coretemp.0/temp2_input
+high_format="high: %val%degC"
+high_value=/sys/devices/platform/coretemp.0/temp2_max
+crit_format="crit: %val%degC"
+crit_value=/sys/devices/platform/coretemp.0/temp2_crit
+
+[sensor1]
+name="Core 1"
+format="%val%degC"
+value=/sys/devices/platform/coretemp.0/temp3_input
+high_format="high: %val%degC"
+high_value=/sys/devices/platform/coretemp.0/temp3_max
+crit_format="crit: %val%degC"
+crit_value=/sys/devices/platform/coretemp.0/temp3_crit
+
+[sensor2]
+name="Battery temperature"
+format="%val%degC"
+value=/sys/devices/platform/smapi/BAT0/temperature
+high_format=""
+high_value=/dev/null
+crit_format=""
+crit_value=/dev/null
+
+[battery0]
+name="Internal battery"
+smapidir=/sys/devices/platform/smapi/BAT0/

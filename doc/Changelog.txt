@@ -1,0 +1,7 @@
+2012-02-11:
+ * implemented missing features
+ * GUI improvements
+
+2012-02-04:
+ * initial version
+
