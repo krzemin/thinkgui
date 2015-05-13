@@ -1,8 +1,8 @@
-# Contributor: Piotr Krzemiński <pio.krzeminski@gmail.com>
+# Maintainer: Piotr Krzemiński <pio.krzeminski@gmail.com>
 
 pkgname=thinkgui
 pkgver=20150513
-pkgrel=2
+pkgrel=3
 pkgdesc="GUI toolkit for ThinkPad laptops"
 arch=('i686' 'x86_64')
 url="https://github.com/krzemin/thinkgui"
@@ -25,7 +25,7 @@ build() {
 
 package() {
   cd "$_gitname"
-  make INSTALL_ROOT="$pkgdir/usr" install
+  make INSTALL_ROOT="$pkgdir/" install
   install -D -m755 "$srcdir/thinkgui-fix-cpu-permissions.sh" "$pkgdir/usr/lib/systemd/system-sleep/thinkgui-fix-cpu-permissions.sh"
 }
 
