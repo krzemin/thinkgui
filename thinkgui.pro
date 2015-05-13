@@ -1,3 +1,5 @@
+QT += widgets
+
 FORMS += \
     forms/thinkgui.ui \
     forms/cpuwidget.ui \
