@@ -25,7 +25,7 @@ build() {
 
 package() {
   cd "$_gitname"
-  make INSTALL_ROOT="$pkgdir" install
-  install -D -m755 "$srcdir/thinkgui-fix-cpu-permissions.sh" "$pkgdir/lib/systemd/system-sleep/thinkgui-fix-cpu-permissions.sh"
+  make INSTALL_ROOT="$pkgdir/usr" install
+  install -D -m755 "$srcdir/thinkgui-fix-cpu-permissions.sh" "$pkgdir/usr/lib/systemd/system-sleep/thinkgui-fix-cpu-permissions.sh"
 }
 
