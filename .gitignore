@@ -23,5 +23,5 @@ build
 aur/pkg
 aur/src
 aur/thinkgui
-aur/thinkgui-*
-
+aur/thinkgui-*.xz
+aur/thinkgui-*.gz
