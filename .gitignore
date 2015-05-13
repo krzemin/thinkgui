@@ -19,3 +19,9 @@ qrc_*.cpp
 Makefile
 *-build-*
 build
+
+aur/pkg
+aur/src
+aur/thinkgui
+aur/thinkgui-*
+
