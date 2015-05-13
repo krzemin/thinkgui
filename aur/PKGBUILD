@@ -2,7 +2,7 @@
 
 pkgname=thinkgui
 pkgver=20150513
-pkgrel=1
+pkgrel=2
 pkgdesc="GUI toolkit for ThinkPad laptops"
 arch=('i686' 'x86_64')
 url="https://github.com/krzemin/thinkgui"
