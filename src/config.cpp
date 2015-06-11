@@ -46,6 +46,23 @@ void Config::load() {
         this->sensors.append(sensor);
         settings.endGroup();
     }
+    
+    int fans = settings.value("fans", 0).toInt();
+    for(int i = 0; i < fans; ++i) {
+        QString section;
+        QTextStream ts(&section);
+        ts << "fan" << i;
+
+        settings.beginGroup(section);
+        FanConfig fan;
+        fan.name = settings.value("name", section).toString();
+        fan.format = settings.value("format").toString();
+        fan.value = settings.value("value").toString();
+        fan.highFormat = settings.value("high_format").toString();
+        fan.highValue = settings.value("high_value").toString();
+        this->fans.append(fan);
+        settings.endGroup();
+    }
 
     int batteries = settings.value("batteries", 0).toInt();
     for(int i = 0; i < batteries; ++i) {

@@ -1,3 +1,6 @@
+2015-06-11:
+ * Added fan-speed
+
 2012-02-11:
  * implemented missing features
  * GUI improvements

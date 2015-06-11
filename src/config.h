@@ -8,6 +8,7 @@
 
 #include "cpuconfig.h"
 #include "sensorconfig.h"
+#include "fanconfig.h"
 #include "batteryconfig.h"
 
 class Config
@@ -22,6 +23,7 @@ public:
     int refresh;
     QVector<CpuConfig> cpus;
     QVector<SensorConfig> sensors;
+    QVector<FanConfig> fans;
     QVector<BatteryConfig> bats;
     QHash<QString, QPair<int, int> > governors;
     friend Config& GlobalConfig();

@@ -1,8 +1,8 @@
 # Maintainer: Piotr Krzemiński <pio.krzeminski@gmail.com>
 
 pkgname=thinkgui
-pkgver=20150513
-pkgrel=3
+pkgver=20150611
+pkgrel=1
 pkgdesc="GUI toolkit for ThinkPad laptops"
 arch=('i686' 'x86_64')
 url="https://github.com/krzemin/thinkgui"

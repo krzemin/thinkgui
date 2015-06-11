@@ -90,11 +90,19 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="fansGroupBox">
+     <property name="title">
+      <string>Fans</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4"/>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="batteryGroupBox">
      <property name="title">
       <string>Battery</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4"/>
+     <layout class="QVBoxLayout" name="verticalLayout_5"/>
     </widget>
    </item>
   </layout>

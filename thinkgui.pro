@@ -4,6 +4,7 @@ FORMS += \
     forms/thinkgui.ui \
     forms/cpuwidget.ui \
     forms/sensorwidget.ui \
+    forms/fanwidget.ui \
     forms/batterywidget.ui \
     forms/advancedbatterydialog.ui
 
@@ -12,10 +13,12 @@ SOURCES += \
     src/thinkgui.cpp \
     src/cpuwidget.cpp \
     src/sensorwidget.cpp \
+    src/fanwidget.cpp \
     src/batterywidget.cpp \
     src/fileio.cpp \
     src/config.cpp \
     src/sensormodel.cpp \
+    src/fanmodel.cpp \
     src/cpumodel.cpp \
     src/batterymodel.cpp \
     src/advancedbatterydialog.cpp
@@ -24,11 +27,13 @@ HEADERS += \
     src/thinkgui.h \
     src/cpuwidget.h \
     src/sensorwidget.h \
+    src/fanwidget.h \
     src/batterywidget.h \
     src/fileio.h \
     src/cpuconfig.h \
     src/config.h \
     src/sensorconfig.h \
+    src/fanconfig.h \
     src/batteryconfig.h \
     src/sensormodel.h \
     src/cpumodel.h \
