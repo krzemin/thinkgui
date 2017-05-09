@@ -1,12 +1,13 @@
 [general]
 refresh=1000
 cpus=4
-sensors=3
+sensors=4
 batteries=1
+fans=1
 
 [governors]
-conservative_min=1200
-conservative_max=2000
+conservative_min=min
+conservative_max=max
 ondemand_min=min
 ondemand_max=max
 performance_min=1600
@@ -35,20 +36,20 @@ sysdir=/sys/devices/system/cpu/cpu3/cpufreq/
 [sensor0]
 name="Core 0"
 format="%val%degC"
-value=/sys/devices/platform/coretemp.0/temp2_input
+value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_input
 high_format="high: %val%degC"
-high_value=/sys/devices/platform/coretemp.0/temp2_max
+high_value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_max
 crit_format="crit: %val%degC"
-crit_value=/sys/devices/platform/coretemp.0/temp2_crit
+crit_value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp2_crit
 
 [sensor1]
 name="Core 1"
 format="%val%degC"
-value=/sys/devices/platform/coretemp.0/temp3_input
+value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp4_input
 high_format="high: %val%degC"
-high_value=/sys/devices/platform/coretemp.0/temp3_max
+high_value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp4_max
 crit_format="crit: %val%degC"
-crit_value=/sys/devices/platform/coretemp.0/temp3_crit
+crit_value=/sys/devices/platform/coretemp.0/hwmon/hwmon0/temp4_crit
 
 [sensor2]
 name="Battery temperature"
@@ -58,6 +59,22 @@ high_format=""
 high_value=/dev/null
 crit_format=""
 crit_value=/dev/null
+
+[sensor3]
+name="ACPI temperature"
+format="%val%degC"
+value=/sys/devices/platform/thinkpad_hwmon/temp1_input
+high_format=""
+high_value=/dev/null
+crit_format=""
+crit_value=/dev/null
+
+[fan0]
+name="Fan Speed"
+format="%val RPM"
+value=/sys/devices/platform/thinkpad_hwmon/fan1_input
+high_format=""
+high_value=/dev/null
 
 [battery0]
 name="Internal battery"

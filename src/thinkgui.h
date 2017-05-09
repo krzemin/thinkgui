@@ -7,6 +7,7 @@
 
 #include "cpuwidget.h"
 #include "sensorwidget.h"
+#include "fanwidget.h"
 #include "batterywidget.h"
 
 namespace Ui {
@@ -35,11 +36,13 @@ private:
     Ui::ThinkGui *ui;
     QVector<CpuWidget*> cpu;
     QVector<SensorWidget*> sensor;
+    QVector<FanWidget*> fan;
     QVector<BatteryWidget*> bat;
     QTimer *updateTimer;
 
     void initCpuWidgets();
     void initSensorWidgets();
+    void initFanWidgets();
     void initBatteryWidgets();
     void setAllGovernors(const QString & governor);
 };

@@ -10,6 +10,7 @@ ThinkGui::ThinkGui(QWidget *parent, Qt::WindowFlags flags) :
     ui->setupUi(this);
     initCpuWidgets();
     initSensorWidgets();
+    initFanWidgets();
     initBatteryWidgets();
     refresh();
     updateTimer = new QTimer(this);
@@ -48,6 +49,11 @@ ThinkGui::~ThinkGui()
     }
     sensor.clear();
 
+    foreach(FanWidget *f, fan) {
+        delete f;
+    }
+    fan.clear();
+    
     foreach(BatteryWidget *b, bat) {
         delete b;
     }
@@ -75,6 +81,16 @@ void ThinkGui::initSensorWidgets() {
         sWidget->setModel(sModel);
         sensor.append(sWidget);
         ui->sensorsGroupBox->layout()->addWidget(sWidget);
+    }
+}
+
+void ThinkGui::initFanWidgets() {
+    foreach(FanConfig fanCfg, GlobalConfig().fans) {
+        FanWidget *fWidget = new FanWidget();
+        FanModel *fModel = new FanModel(fanCfg);
+        fWidget->setModel(fModel);
+        fan.append(fWidget);
+        ui->fansGroupBox->layout()->addWidget(fWidget);
     }
 }
 
@@ -106,6 +122,10 @@ void ThinkGui::refresh() {
 
     foreach(SensorWidget *sWidget, sensor) {
         sWidget->refresh();
+    }
+
+    foreach(FanWidget *fWidget, fan) {
+        fWidget->refresh();
     }
 
     foreach(BatteryWidget *bWidget, bat) {
