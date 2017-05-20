@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=thinkgui
+Comment=GUI for ThinkPad laptops 
+Exec=thinkgui
+Icon=thinkgui
+Categories=System;
