@@ -5,3 +5,5 @@ Linux GUI for ThinkPad laptops
 **I am not currently maintaining this project any more. Feel free to contact me if you want to take it over.**
 
 ![screenshot](thinkgui.png)
+
+There is [ArchLinux PKGBUILD](https://aur.archlinux.org/packages/thinkgui/) available.
